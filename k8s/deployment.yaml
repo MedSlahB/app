@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basic-tekton-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: basic-tekton-app
+  template:
+    metadata:
+      labels:
+        app: basic-tekton-app
+    spec:
+      containers:
+        - name: basic-tekton-app
+          image: image-registry.openshift-image-registry.svc:5000/cicd-demo/basic-tekton-app:latest
+          ports:
+            - containerPort: 8080
+

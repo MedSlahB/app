@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: basic-tekton-app
+spec:
+  to:
+    kind: Service
+    name: basic-tekton-app
+  port:
+    targetPort: 80
+

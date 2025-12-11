@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: basic-tekton-app
+spec:
+  type: ClusterIP
+  selector:
+    app: basic-tekton-app
+  ports:
+    - port: 80
+      targetPort: 8080
+
