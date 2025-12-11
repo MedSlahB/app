@@ -7,5 +7,5 @@ spec:
     kind: Service
     name: basic-tekton-app
   port:
-    targetPort: 80
+    targetPort: http
 

@@ -1,7 +1,7 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-  res.end("Hello from OpenShift Tekton CI/CD pipeline!");
+  res.end("Hello World");
 });
 
 server.listen(8080, () => {
