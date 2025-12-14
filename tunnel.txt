@@ -1,0 +1,5 @@
+# Get your route
+ROUTE_HOST=$(oc get route github-webhook -n cicd-demo -o jsonpath='{.spec.host}')
+
+# Start ngrok
+ngrok http https://$ROUTE_HOST --host-header=$ROUTE_HOST
