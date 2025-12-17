@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: basic-tekton-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: basic-tekton-app
