@@ -16,11 +16,11 @@ spec:
         app: basic-tekton-app
       annotations:
         # Tekton will update this timestamp to force a restart
-        last-updated: "initial" 
+        last-updated: "1765970174"
     spec:
       containers:
         - name: basic-tekton-app
-          image: 
+          image: image-registry.openshift-image-registry.svc:5000/cicd-demo/basic-tekton-app:v2.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
