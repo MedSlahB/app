@@ -4,6 +4,9 @@ metadata:
   name: basic-tekton-app
 spec:
   replicas: 1
+  # This ensures it kills the old one and starts a new one
+  strategy:
+    type: RollingUpdate
   selector:
     matchLabels:
       app: basic-tekton-app
@@ -11,10 +14,13 @@ spec:
     metadata:
       labels:
         app: basic-tekton-app
+      annotations:
+        # Tekton will update this timestamp to force a restart
+        last-updated: "initial" 
     spec:
       containers:
         - name: basic-tekton-app
-          image: image-registry.openshift-image-registry.svc:5000/cicd-demo/basic-tekton-app:v2.0.0
+          image: 
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
-
