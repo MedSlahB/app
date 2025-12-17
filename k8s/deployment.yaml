@@ -16,7 +16,7 @@ spec:
         app: basic-tekton-app
       annotations:
         # Tekton will update this timestamp to force a restart
-        last-updated: "1765973816"
+        last-updated: "1765973928"
     spec:
       containers:
         - name: basic-tekton-app
