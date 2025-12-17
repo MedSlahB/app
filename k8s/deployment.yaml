@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: basic-tekton-app
-          image: image-registry.openshift-image-registry.svc:5000/cicd-demo/basic-tekton-app:latest
+          image: image-registry.openshift-image-registry.svc:5000/cicd-demo/basic-tekton-app:v2.0.0
           ports:
             - containerPort: 8080
 
