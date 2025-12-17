@@ -5,7 +5,7 @@ const server = http.createServer((req, res) => {
   res.end(`
     <html>
       <body style="background-color: #2d3436; color: #dfe6e9; font-family: sans-serif; text-align: center; padding-top: 50px;">
-        <h1 style="color: #00cec9;">ArgoCD + Tekton + Ansible</h1>
+        <h1 style="color: #00cec9;">ArgoCD + Tektonas + Ansible</h1>
         <h2 style="border-bottom: 2px solid #00cec9; display: inline-block; padding-bottom: 10px;">
           Application Version 2.0.0
         </h2>
