@@ -1,0 +1,16 @@
+- name: Refresh Application Replicas
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Trigger a rollout restart of the Raw YAML deployment
+      kubernetes.core.k8s:
+        state: patched
+        kind: Deployment
+        name: basic-tekton-app
+        namespace: gitops-demo
+        definition:
+          spec:
+            template:
+              metadata:
+                annotations:
+                  ansible.restartedAt: "{{ ansible_date_time.iso8601 }}"
